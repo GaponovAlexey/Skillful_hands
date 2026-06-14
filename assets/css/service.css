@@ -1,0 +1,108 @@
+/* ============================================================
+   Service detail (Pencil DOYUn et al). Подключается из
+   pages/service_detail.rs. Один шаблон на 5 услуг.
+   ============================================================ */
+
+/* Общие для секции: full-width фон + центрованный .wrap */
+.sd-hero,
+.sd-features,
+.sd-gallery,
+.sd-process,
+.sd-cta { width: 100%; padding-inline: var(--pad-x); }
+
+.sd-features,
+.sd-gallery,
+.sd-process { padding-block: 88px; }
+
+/* Section header (eyebrow + h2) */
+.sd-head { display: flex; flex-direction: column; gap: 14px; max-width: 680px; }
+.sd-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--leaf); }
+.sd-h2 { font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 4vw, 40px); line-height: 1.1; color: var(--text-primary); }
+
+/* ---------- A. Detail Hero ---------- */
+.sd-hero { background: var(--forest-deep); padding-block: 80px; }
+.sd-hero__inner { display: flex; align-items: center; gap: 56px; }
+.sd-hero__left { flex: 1; display: flex; flex-direction: column; gap: 22px; min-width: 0; }
+.sd-crumb { display: flex; align-items: center; gap: 8px; }
+.sd-crumb__root { font-size: 14px; font-weight: 500; color: var(--text-on-dark-muted); transition: color 0.18s ease; }
+.sd-crumb__root:hover { color: var(--leaf-soft); }
+.sd-crumb svg { width: 15px; height: 15px; color: var(--text-on-dark-muted); }
+.sd-crumb__current { font-size: 14px; font-weight: 600; color: var(--leaf-soft); }
+.sd-hero__title { font-family: var(--font-display); font-weight: 600; font-size: clamp(38px, 5.5vw, 56px); line-height: 1.05; color: var(--text-on-dark); }
+.sd-hero__intro { font-size: 18px; line-height: 1.55; color: var(--text-on-dark-muted); max-width: 560px; }
+.sd-hero__btns { display: flex; gap: 14px; flex-wrap: wrap; padding-top: 8px; }
+.sd-hero__photo {
+  flex: none;
+  width: 560px; height: 420px;
+  border-radius: var(--radius-lg);
+  background-size: cover; background-position: center;
+  background-color: var(--sand);
+}
+
+/* ---------- B. Features ---------- */
+.sd-features { background: var(--bg); }
+.sd-features__inner { display: flex; flex-direction: column; gap: 40px; }
+.sd-feature-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.sd-feature {
+  display: flex; align-items: flex-start; gap: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.sd-feature__icon {
+  width: 48px; height: 48px; flex: none;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 12px; background: var(--sand-soft); color: var(--forest);
+}
+.sd-feature__icon svg { width: 24px; height: 24px; }
+.sd-feature__text { display: flex; flex-direction: column; gap: 6px; }
+.sd-feature__title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text-primary); }
+.sd-feature__desc { font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
+
+/* ---------- C. Gallery ---------- */
+.sd-gallery { background: var(--surface); }
+.sd-gallery__inner { display: flex; flex-direction: column; gap: 36px; }
+.sd-gallery__row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 300px; }
+.sd-gallery__photo {
+  border-radius: var(--radius-lg);
+  background-size: cover; background-position: center;
+  background-color: var(--sand);
+}
+
+/* ---------- D. Process ---------- */
+.sd-process { background: var(--bg); }
+.sd-process__inner { display: flex; flex-direction: column; gap: 40px; }
+.sd-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.sd-step {
+  display: flex; flex-direction: column; gap: 12px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+.sd-step__num { font-family: var(--font-display); font-size: 30px; font-weight: 600; color: var(--leaf); line-height: 1; }
+.sd-step__title { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--text-primary); }
+.sd-step__desc { font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
+
+/* ---------- E. Closing CTA ---------- */
+.sd-cta { background: var(--forest); padding-block: 72px; }
+.sd-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+.sd-cta__title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 38px); font-weight: 600; line-height: 1.1; color: var(--text-on-dark); max-width: 720px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .sd-hero__inner { flex-direction: column; align-items: flex-start; gap: 40px; }
+  .sd-hero__photo { width: 100%; height: 340px; }
+  .sd-hero__intro { max-width: 100%; }
+  .sd-steps { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 640px) {
+  .sd-features,
+  .sd-gallery,
+  .sd-process { padding-block: 64px; }
+  .sd-feature-grid { grid-template-columns: 1fr; }
+  .sd-steps { grid-template-columns: 1fr; }
+  .sd-gallery__row { grid-template-columns: 1fr; height: auto; }
+  .sd-gallery__photo { height: 220px; }
+}

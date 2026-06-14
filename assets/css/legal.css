@@ -1,0 +1,55 @@
+/* ============================================================
+   Legal pages — Privacy Policy (FV65D) + Terms of Service (PHUHz).
+   Подключается из pages/legal.rs. Header/Footer/Cookie — из Layout.
+   ============================================================ */
+
+/* ---------- Title Band (forest-deep) ---------- */
+.legal-band {
+  width: 100%;
+  padding: 72px var(--pad-x);
+  background: var(--forest-deep);
+}
+.legal-band__inner { display: flex; flex-direction: column; gap: 12px; }
+.legal-band__title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(36px, 5vw, 52px);
+  line-height: 1.1;
+  color: var(--text-on-dark);
+}
+.legal-band__updated { font-size: 15px; color: var(--text-on-dark-muted); }
+
+/* ---------- Content (узкая колонка для читабельности) ---------- */
+.legal-content {
+  width: 100%;
+  padding: 80px var(--pad-x);
+  background: var(--bg);
+  display: flex;
+  justify-content: center;
+}
+.legal-content__col {
+  width: 820px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+.legal-section { display: flex; flex-direction: column; gap: 10px; }
+.legal-section__heading {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+.legal-section__body {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 860px) {
+  .legal-band { padding: 56px var(--pad-x); }
+  .legal-content { padding: 60px var(--pad-x); }
+}

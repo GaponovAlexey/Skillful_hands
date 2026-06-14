@@ -1,0 +1,17 @@
+[application]
+name = "skillful_hands"
+default_platform = "web"
+
+# Статические ассеты (логотип, картинки)
+public_dir = "assets"
+
+[web.app]
+title = "Skillful Hands Solutions LTD"
+
+[web.watcher]
+reload_html = true
+watch_path = ["src", "assets", "index.html"]
+
+[web.resource.dev]
+# Не минифицируем JS в dev — избегаем ошибок SWC при hot-reload
+minify = false

@@ -1,0 +1,167 @@
+/* ============================================================
+   Home / Landing (Pencil C5tVy). Подключается из pages/home.rs.
+   ============================================================ */
+
+/* ---------- Hero (hv0zC) ---------- */
+.hero {
+  position: relative;
+  min-height: 680px;
+  display: flex;
+  align-items: flex-end;
+  padding: 64px var(--pad-x);
+  background-image:
+    linear-gradient(180deg, #0c0b0866 0%, #0a0907f7 100%),
+    url("https://images.unsplash.com/photo-1756435292384-1bf32eff7baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600");
+  background-size: cover;
+  background-position: center;
+}
+.hero__inner { width: 780px; max-width: 100%; display: flex; flex-direction: column; gap: 26px; }
+.hero__eyebrow {
+  align-self: flex-start;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 8px 14px; border-radius: 100px;
+  background: #ffffff1f; border: 1px solid #ffffff33;
+  color: var(--text-on-dark); font-size: 13px; font-weight: 600; letter-spacing: 0.5px;
+}
+.hero__eyebrow svg { width: 14px; height: 14px; }
+.hero__headline {
+  font-family: var(--font-display); font-weight: 600;
+  font-size: clamp(38px, 5.5vw, 62px); line-height: 1.05;
+  color: var(--text-on-dark);
+}
+.hero__sub { max-width: 620px; font-size: 18px; line-height: 1.5; color: var(--text-on-dark-muted); }
+.hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ---------- Generic section ---------- */
+.home-section { padding: 90px var(--pad-x); }
+.home-section--surface { background: var(--surface); }
+.home-section--bg { background: var(--bg); }
+.home-section--forest { background: var(--forest-deep); }
+.home-section > .wrap { display: flex; flex-direction: column; gap: 40px; }
+
+/* ---------- Section header ---------- */
+.sec-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+.sec-head__left { display: flex; flex-direction: column; gap: 14px; max-width: 700px; }
+.sec-eyebrow { font-size: 13px; font-weight: 700; letter-spacing: 2px; color: var(--leaf); }
+.sec-eyebrow--soft { color: var(--leaf-soft); }
+.sec-title { font-family: var(--font-display); font-weight: 600; font-size: clamp(30px, 4vw, 44px); line-height: 1.1; }
+.sec-title--light { color: var(--text-on-dark); }
+.sec-note { max-width: 300px; font-size: 16px; line-height: 1.5; color: var(--text-secondary); }
+.sec-note--light { color: var(--text-on-dark-muted); }
+
+.pill-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 20px; border-radius: 100px;
+  border: 1px solid var(--border); color: var(--text-primary);
+  font-size: 15px; font-weight: 600;
+  transition: border-color .18s ease, background .18s ease;
+}
+.pill-link:hover { border-color: var(--leaf); background: #ffffff08; }
+.pill-link svg { width: 16px; height: 16px; color: var(--leaf); }
+
+/* ---------- Projects gallery (GpsRO) ---------- */
+.gallery-top { display: grid; grid-template-columns: 1fr 460px; gap: 24px; height: 440px; }
+.gallery-top__right { display: grid; grid-template-rows: 1fr 1fr; gap: 24px; min-height: 0; }
+.gallery-bottom { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; height: 280px; }
+.tile {
+  position: relative; display: flex; align-items: flex-end;
+  border-radius: var(--radius-lg); overflow: hidden;
+  background-size: cover; background-position: center;
+  background-color: var(--sand);
+  padding: 18px;
+}
+.tile::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 45%, #0a0907d9); }
+.tile__chip {
+  position: relative; z-index: 1;
+  padding: 7px 13px; border-radius: 100px;
+  background: #0e160fb3; color: var(--text-on-dark);
+  font-size: 13px; font-weight: 600;
+}
+
+/* ---------- Services grid (MMmfm) ---------- */
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.service-cta {
+  display: flex; flex-direction: column; justify-content: space-between; gap: 16px;
+  background: var(--forest); border-radius: var(--radius-lg); padding: 32px;
+}
+.service-cta__title { font-family: var(--font-display); font-size: 23px; font-weight: 600; color: var(--text-on-dark); line-height: 1.15; }
+.service-cta__desc { font-size: 15px; line-height: 1.5; color: var(--text-on-dark-muted); margin-top: 14px; }
+.service-cta__btn { align-self: flex-start; padding: 12px 18px; }
+
+/* ---------- Why Us values + stats (C5Ccj) ---------- */
+.values { display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px; }
+.value-card { display: flex; flex-direction: column; gap: 14px; }
+.value-card__icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--border-dark); color: var(--leaf-soft);
+}
+.value-card__icon svg { width: 24px; height: 24px; }
+.value-card__title { font-family: var(--font-display); font-size: 20px; font-weight: 600; color: var(--text-on-dark); }
+.value-card__desc { font-size: 14px; line-height: 1.5; color: var(--text-on-dark-muted); }
+
+.stats {
+  display: grid; grid-template-columns: repeat(4, 1fr); gap: 28px;
+  padding-top: 40px; border-top: 1px solid var(--border-dark);
+}
+.stat__num { font-family: var(--font-display); font-size: 46px; font-weight: 600; color: var(--text-on-dark); line-height: 1; }
+.stat__label { font-size: 14px; color: var(--text-on-dark-muted); margin-top: 6px; }
+
+/* ---------- Owners (ukTs8) ---------- */
+.owners { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.owner-card {
+  display: flex; flex-direction: column;
+  background: var(--bg); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+}
+.owner-card__photo { height: 380px; background-size: cover; background-position: center; background-color: var(--sand); }
+.owner-card__body { display: flex; flex-direction: column; gap: 10px; padding: 30px; }
+.owner-card__name { font-family: var(--font-display); font-size: 26px; font-weight: 600; color: var(--text-primary); }
+.owner-card__role { font-size: 14px; font-weight: 600; letter-spacing: 0.5px; color: var(--leaf); }
+.owner-card__bio { font-size: 15px; line-height: 1.55; color: var(--text-secondary); }
+
+/* ---------- Testimonials (yGEU9) ---------- */
+.reviews { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; align-items: start; }
+.google-badge {
+  display: inline-flex; align-items: center; gap: 10px;
+  padding: 12px 18px; border-radius: 100px;
+  background: var(--surface); border: 1px solid var(--border);
+  font-size: 14px; font-weight: 600; color: var(--text-primary);
+}
+.google-badge svg { width: 18px; height: 18px; color: #e0a23b; fill: #e0a23b; }
+
+/* ---------- CTA band (GeAR4) ---------- */
+.cta-band {
+  display: flex; justify-content: center;
+  padding: 64px var(--pad-x);
+  background-image:
+    linear-gradient(0deg, #0a0907e6, #0a0907e6),
+    url("https://images.unsplash.com/photo-1748063578185-3d68121b11ff?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600");
+  background-size: cover; background-position: center;
+}
+.cta-band__inner { width: 760px; max-width: 100%; display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+.cta-band__headline { font-family: var(--font-display); font-size: clamp(32px, 5vw, 48px); font-weight: 600; line-height: 1.1; color: var(--text-on-dark); }
+.cta-band__sub { max-width: 560px; font-size: 17px; line-height: 1.5; color: var(--text-on-dark-muted); }
+.cta-band__btns { display: flex; gap: 14px; flex-wrap: wrap; justify-content: center; padding-top: 10px; }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 980px) {
+  .gallery-top { grid-template-columns: 1fr; height: auto; }
+  .gallery-top .tile--big { height: 320px; }
+  .gallery-top__right { grid-template-rows: none; grid-template-columns: 1fr 1fr; }
+  .gallery-top__right .tile { height: 220px; }
+  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .values { grid-template-columns: repeat(2, 1fr); }
+  .stats { grid-template-columns: repeat(2, 1fr); }
+  .owners { grid-template-columns: 1fr; }
+  .reviews { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .gallery-bottom { grid-template-columns: 1fr; height: auto; }
+  .gallery-bottom .tile { height: 200px; }
+  .gallery-top__right { grid-template-columns: 1fr; }
+  .gallery-top__right .tile { height: 200px; }
+  .service-grid { grid-template-columns: 1fr; }
+  .values { grid-template-columns: 1fr; }
+  .home-section > .wrap { gap: 32px; }
+}

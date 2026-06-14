@@ -1,0 +1,60 @@
+use dioxus::prelude::*;
+
+use crate::components::{CookieBanner, Footer, Header};
+use crate::pages::{Home, Privacy, ServiceDetail, Services, Terms};
+
+const MAIN_CSS: Asset = asset!("/assets/main.css");
+// Все стили грузим на уровне App (он не размонтируется при навигации),
+// иначе пер-страничный document::Stylesheet подгружается асинхронно при
+// первом рендере страницы → рывок без стилей (FOUC) на первом переходе.
+const HOME_CSS: Asset = asset!("/assets/css/home.css");
+const SERVICES_CSS: Asset = asset!("/assets/css/services.css");
+const SERVICE_CSS: Asset = asset!("/assets/css/service.css");
+const LEGAL_CSS: Asset = asset!("/assets/css/legal.css");
+
+/// Маршруты сайта. Layout оборачивает все страницы шапкой/подвалом/cookie.
+#[derive(Routable, Clone, PartialEq)]
+pub enum Route {
+    #[layout(Layout)]
+    #[route("/")]
+    Home {},
+    #[route("/services")]
+    Services {},
+    #[route("/services/:slug")]
+    ServiceDetail { slug: String },
+    #[route("/privacy")]
+    Privacy {},
+    #[route("/terms")]
+    Terms {},
+}
+
+#[component]
+pub fn App() -> Element {
+    rsx! {
+        document::Stylesheet { href: MAIN_CSS }
+        document::Stylesheet { href: HOME_CSS }
+        document::Stylesheet { href: SERVICES_CSS }
+        document::Stylesheet { href: SERVICE_CSS }
+        document::Stylesheet { href: LEGAL_CSS }
+        Router::<Route> {}
+    }
+}
+
+#[component]
+fn Layout() -> Element {
+    // Сброс скролла наверх при смене роута (SPA не делает это сам).
+    // Якорный скролл внутри страницы — не смена роута, эффект не триггерит.
+    let route = use_route::<Route>();
+    use_effect(use_reactive((&route,), move |(_,)| {
+        spawn(async move {
+            let _ = document::eval("window.scrollTo(0, 0);").await;
+        });
+    }));
+
+    rsx! {
+        Header {}
+        Outlet::<Route> {}
+        Footer {}
+        CookieBanner {}
+    }
+}

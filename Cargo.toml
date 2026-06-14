@@ -1,0 +1,15 @@
+[package]
+name = "skillful_hands"
+version = "0.1.0"
+edition = "2021"
+description = "Skillful Hands Solutions LTD — marketing site (Dioxus web)"
+
+[dependencies]
+dioxus = { version = "0.7", features = ["web", "router"] }
+
+[profile.release]
+opt-level = "z"
+lto = true
+codegen-units = 1
+panic = "abort"
+strip = true
