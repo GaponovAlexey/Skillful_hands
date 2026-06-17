@@ -1,12 +1,15 @@
 use dioxus::prelude::*;
 
 use crate::components::{ContactForm, Icon, ReviewCard, ScrollLink, ServiceCard};
+use crate::pages::project_tiles;
 use crate::Route;
 
 // Hero-фон — реальное фото объекта. Через asset!(), чтобы base_path
 // (GitHub Pages project-page /Skillful_hands/) корректно префиксил путь,
 // а не грузил с корня сайта (иначе 404 на под-пути).
 const HERO_IMG: Asset = asset!("/assets/img/hero.jpg");
+// Фон CTA-баннера — реальный объект (через asset!() ради base-path на GitHub Pages).
+const CTA_IMG: Asset = asset!("/assets/img/foto_web/island-retreat-exterior-after-07.jpg");
 
 /// Лендинг (Pencil C5tVy «Sweet Yards Landing» → ребренд Skillful Hands).
 #[component]
@@ -51,10 +54,12 @@ fn Hero() -> Element {
 }
 
 // ---------- Projects (GpsRO) ----------
+// Плитка проекта → переход на /projects/:slug (детальная страница-кейс).
 #[component]
-fn ProjectTile(label: String, img: String, #[props(default = false)] big: bool) -> Element {
+fn ProjectTile(slug: String, label: String, img: String, #[props(default = false)] big: bool) -> Element {
     rsx! {
-        div {
+        Link {
+            to: Route::ProjectDetail { slug },
             class: if big { "tile tile--big" } else { "tile" },
             style: "background-image:url('{img}')",
             span { class: "tile__chip", "{label}" }
@@ -64,6 +69,9 @@ fn ProjectTile(label: String, img: String, #[props(default = false)] big: bool) 
 
 #[component]
 fn Projects() -> Element {
+    // 3 реальных проекта (slug, подпись, фото) из project_detail.rs.
+    // Раскладка big+2: первый — крупный, остальные два — в правой колонке.
+    let tiles = project_tiles();
     rsx! {
         section { id: "projects", class: "home-section home-section--surface",
             div { class: "wrap",
@@ -72,40 +80,25 @@ fn Projects() -> Element {
                         span { class: "sec-eyebrow", "OUR WORK" }
                         h2 { class: "sec-title", "See some of our past projects" }
                     }
-                    Link { to: Route::Services {}, class: "pill-link",
-                        "View all projects"
-                        Icon { name: "arrow-up-right".to_string(), size: 16 }
-                    }
                 }
                 div { class: "gallery-top",
-                    ProjectTile {
-                        big: true,
-                        label: "Waterfront Cabin",
-                        img: "https://images.unsplash.com/photo-1688604693147-ff99ce13e291?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1280",
+                    if let Some((slug , label , img)) = tiles.first() {
+                        ProjectTile {
+                            big: true,
+                            slug: slug.to_string(),
+                            label: label.to_string(),
+                            img: img.clone(),
+                        }
                     }
                     div { class: "gallery-top__right",
-                        ProjectTile {
-                            label: "Lakeside Retreat",
-                            img: "https://images.unsplash.com/photo-1779812773030-07c2c1f16e66?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
+                        for (slug , label , img) in tiles.iter().skip(1) {
+                            ProjectTile {
+                                key: "{slug}",
+                                slug: slug.to_string(),
+                                label: label.to_string(),
+                                img: img.clone(),
+                            }
                         }
-                        ProjectTile {
-                            label: "Forest Cottage",
-                            img: "https://images.unsplash.com/photo-1619688137428-851529e61a0f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-                        }
-                    }
-                }
-                div { class: "gallery-bottom",
-                    ProjectTile {
-                        label: "Cedar Deck",
-                        img: "https://images.unsplash.com/photo-1735657438299-7d543a1b8cc2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-                    }
-                    ProjectTile {
-                        label: "Coastal Cabin",
-                        img: "https://images.unsplash.com/photo-1604609165678-096d20fab1ad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
-                    }
-                    ProjectTile {
-                        label: "Hillside Build",
-                        img: "https://images.unsplash.com/photo-1717292067908-5e36d903c8b0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080",
                     }
                 }
             }
@@ -288,7 +281,9 @@ fn Testimonials() -> Element {
 #[component]
 fn CtaBand() -> Element {
     rsx! {
-        section { class: "cta-band",
+        section {
+            class: "cta-band",
+            style: "background-image: linear-gradient(0deg, #0a0907e6, #0a0907e6), url({CTA_IMG});",
             div { class: "cta-band__inner",
                 span { class: "sec-eyebrow sec-eyebrow--soft", "LET'S BUILD SOMETHING GREAT" }
                 h2 { class: "cta-band__headline", "Ready to start your project?" }

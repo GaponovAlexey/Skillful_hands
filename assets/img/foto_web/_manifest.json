@@ -1,0 +1,1502 @@
+{
+  "manifest": [
+    {
+      "src": "IMG_0708.HEIC",
+      "out": "IMG_0708.jpg",
+      "src_bytes": 2579439,
+      "out_bytes": 569477,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_0712.HEIC",
+      "out": "IMG_0712.jpg",
+      "src_bytes": 1463849,
+      "out_bytes": 420604,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_1324.HEIC",
+      "out": "IMG_1324.jpg",
+      "src_bytes": 2514510,
+      "out_bytes": 608412,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_1889.HEIC",
+      "out": "IMG_1889.jpg",
+      "src_bytes": 1373267,
+      "out_bytes": 413690,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_1892.HEIC",
+      "out": "IMG_1892.jpg",
+      "src_bytes": 1297889,
+      "out_bytes": 420972,
+      "orig_dims": [
+        3022,
+        3899
+      ],
+      "out_dims": [
+        1488,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_1895.HEIC",
+      "out": "IMG_1895.jpg",
+      "src_bytes": 2142932,
+      "out_bytes": 529677,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_1897.HEIC",
+      "out": "IMG_1897.jpg",
+      "src_bytes": 1595238,
+      "out_bytes": 470024,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_1899.HEIC",
+      "out": "IMG_1899.jpg",
+      "src_bytes": 1982357,
+      "out_bytes": 543616,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_1900.HEIC",
+      "out": "IMG_1900.jpg",
+      "src_bytes": 1445804,
+      "out_bytes": 420900,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_1924.HEIC",
+      "out": "IMG_1924.jpg",
+      "src_bytes": 3103590,
+      "out_bytes": 554821,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_3252.HEIC",
+      "out": "IMG_3252.jpg",
+      "src_bytes": 2948181,
+      "out_bytes": 615475,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_3491.HEIC",
+      "out": "IMG_3491.jpg",
+      "src_bytes": 3037985,
+      "out_bytes": 623191,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_3502.HEIC",
+      "out": "IMG_3502.jpg",
+      "src_bytes": 1860701,
+      "out_bytes": 523171,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_3786.HEIC",
+      "out": "IMG_3786.jpg",
+      "src_bytes": 2153360,
+      "out_bytes": 413780,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_3973.HEIC",
+      "out": "IMG_3973.jpg",
+      "src_bytes": 4268709,
+      "out_bytes": 613337,
+      "orig_dims": [
+        3023,
+        3628
+      ],
+      "out_dims": [
+        1600,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_4046.HEIC",
+      "out": "IMG_4046.jpg",
+      "src_bytes": 2762249,
+      "out_bytes": 590318,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_4385.HEIC",
+      "out": "IMG_4385.jpg",
+      "src_bytes": 3649383,
+      "out_bytes": 769597,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_4386.HEIC",
+      "out": "IMG_4386.jpg",
+      "src_bytes": 2656424,
+      "out_bytes": 555111,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_4387.HEIC",
+      "out": "IMG_4387.jpg",
+      "src_bytes": 1985922,
+      "out_bytes": 443188,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_4398.HEIC",
+      "out": "IMG_4398.jpg",
+      "src_bytes": 2251639,
+      "out_bytes": 461649,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_4401.HEIC",
+      "out": "IMG_4401.jpg",
+      "src_bytes": 1598483,
+      "out_bytes": 521833,
+      "orig_dims": [
+        3023,
+        3534
+      ],
+      "out_dims": [
+        1642,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_4406.HEIC",
+      "out": "IMG_4406.jpg",
+      "src_bytes": 2301236,
+      "out_bytes": 431418,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_4572.JPG",
+      "out": "IMG_4572.jpg",
+      "src_bytes": 527146,
+      "out_bytes": 578127,
+      "orig_dims": [
+        2000,
+        1500
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_4983.JPG",
+      "out": "IMG_4983.jpg",
+      "src_bytes": 5043652,
+      "out_bytes": 451263,
+      "orig_dims": [
+        4000,
+        3000
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5011.HEIC",
+      "out": "IMG_5011.jpg",
+      "src_bytes": 2430110,
+      "out_bytes": 419111,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5012.HEIC",
+      "out": "IMG_5012.jpg",
+      "src_bytes": 2345755,
+      "out_bytes": 449521,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5013.HEIC",
+      "out": "IMG_5013.jpg",
+      "src_bytes": 1602687,
+      "out_bytes": 370703,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5014.HEIC",
+      "out": "IMG_5014.jpg",
+      "src_bytes": 1613020,
+      "out_bytes": 461266,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5326.JPG",
+      "out": "IMG_5326.jpg",
+      "src_bytes": 5919880,
+      "out_bytes": 567127,
+      "orig_dims": [
+        4000,
+        3000
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5330.JPG",
+      "out": "IMG_5330.jpg",
+      "src_bytes": 2820999,
+      "out_bytes": 629079,
+      "orig_dims": [
+        3003,
+        2541
+      ],
+      "out_dims": [
+        1920,
+        1625
+      ]
+    },
+    {
+      "src": "IMG_5473.HEIC",
+      "out": "IMG_5473.jpg",
+      "src_bytes": 3490934,
+      "out_bytes": 973005,
+      "orig_dims": [
+        3833,
+        2954
+      ],
+      "out_dims": [
+        1920,
+        1480
+      ]
+    },
+    {
+      "src": "IMG_5554.HEIC",
+      "out": "IMG_5554.jpg",
+      "src_bytes": 1963437,
+      "out_bytes": 512089,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5558.HEIC",
+      "out": "IMG_5558.jpg",
+      "src_bytes": 3060982,
+      "out_bytes": 527302,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5650.HEIC",
+      "out": "IMG_5650.jpg",
+      "src_bytes": 4471971,
+      "out_bytes": 597054,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5652.HEIC",
+      "out": "IMG_5652.jpg",
+      "src_bytes": 4101602,
+      "out_bytes": 439718,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5653.HEIC",
+      "out": "IMG_5653.jpg",
+      "src_bytes": 3475175,
+      "out_bytes": 356721,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5654.HEIC",
+      "out": "IMG_5654.jpg",
+      "src_bytes": 3481494,
+      "out_bytes": 361323,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5655.HEIC",
+      "out": "IMG_5655.jpg",
+      "src_bytes": 2313484,
+      "out_bytes": 227120,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5656.HEIC",
+      "out": "IMG_5656.jpg",
+      "src_bytes": 3064017,
+      "out_bytes": 274130,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5657.PNG",
+      "out": "IMG_5657.jpg",
+      "src_bytes": 2679412,
+      "out_bytes": 303345,
+      "orig_dims": [
+        1086,
+        1448
+      ],
+      "out_dims": [
+        1086,
+        1448
+      ]
+    },
+    {
+      "src": "IMG_5658.JPG",
+      "out": "IMG_5658.jpg",
+      "src_bytes": 741419,
+      "out_bytes": 442252,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5659.JPG",
+      "out": "IMG_5659.jpg",
+      "src_bytes": 912332,
+      "out_bytes": 537860,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5660.JPG",
+      "out": "IMG_5660.jpg",
+      "src_bytes": 876898,
+      "out_bytes": 519255,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5662.PNG",
+      "out": "IMG_5662.jpg",
+      "src_bytes": 3171240,
+      "out_bytes": 433202,
+      "orig_dims": [
+        1448,
+        1086
+      ],
+      "out_dims": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "src": "IMG_5663.PNG",
+      "out": "IMG_5663.jpg",
+      "src_bytes": 3171347,
+      "out_bytes": 415726,
+      "orig_dims": [
+        1448,
+        1086
+      ],
+      "out_dims": [
+        1448,
+        1086
+      ]
+    },
+    {
+      "src": "IMG_5664.JPG",
+      "out": "IMG_5664.jpg",
+      "src_bytes": 938775,
+      "out_bytes": 557112,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5665.JPG",
+      "out": "IMG_5665.jpg",
+      "src_bytes": 879373,
+      "out_bytes": 517605,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5667.JPG",
+      "out": "IMG_5667.jpg",
+      "src_bytes": 821335,
+      "out_bytes": 484556,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5668.JPG",
+      "out": "IMG_5668.jpg",
+      "src_bytes": 682496,
+      "out_bytes": 335113,
+      "orig_dims": [
+        1252,
+        1019
+      ],
+      "out_dims": [
+        1252,
+        1019
+      ]
+    },
+    {
+      "src": "IMG_5669.JPG",
+      "out": "IMG_5669.jpg",
+      "src_bytes": 583688,
+      "out_bytes": 360648,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5670.JPG",
+      "out": "IMG_5670.jpg",
+      "src_bytes": 665149,
+      "out_bytes": 403313,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5671.JPG",
+      "out": "IMG_5671.jpg",
+      "src_bytes": 671020,
+      "out_bytes": 331256,
+      "orig_dims": [
+        1285,
+        981
+      ],
+      "out_dims": [
+        1285,
+        981
+      ]
+    },
+    {
+      "src": "IMG_5673.JPG",
+      "out": "IMG_5673.jpg",
+      "src_bytes": 677078,
+      "out_bytes": 410047,
+      "orig_dims": [
+        1600,
+        1200
+      ],
+      "out_dims": [
+        1600,
+        1200
+      ]
+    },
+    {
+      "src": "IMG_5914.HEIC",
+      "out": "IMG_5914.jpg",
+      "src_bytes": 3057938,
+      "out_bytes": 491267,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_5947.HEIC",
+      "out": "IMG_5947.jpg",
+      "src_bytes": 1580615,
+      "out_bytes": 349414,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_5949.HEIC",
+      "out": "IMG_5949.jpg",
+      "src_bytes": 1575609,
+      "out_bytes": 379175,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_6296.HEIC",
+      "out": "IMG_6296.jpg",
+      "src_bytes": 3049885,
+      "out_bytes": 567906,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_6307.HEIC",
+      "out": "IMG_6307.jpg",
+      "src_bytes": 1940144,
+      "out_bytes": 329777,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_6308.HEIC",
+      "out": "IMG_6308.jpg",
+      "src_bytes": 1659757,
+      "out_bytes": 220427,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_6665.HEIC",
+      "out": "IMG_6665.jpg",
+      "src_bytes": 2581385,
+      "out_bytes": 423364,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_6689.HEIC",
+      "out": "IMG_6689.jpg",
+      "src_bytes": 2121863,
+      "out_bytes": 265187,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_6692.HEIC",
+      "out": "IMG_6692.jpg",
+      "src_bytes": 1983824,
+      "out_bytes": 307383,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_6695.HEIC",
+      "out": "IMG_6695.jpg",
+      "src_bytes": 2302487,
+      "out_bytes": 391060,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_6753.JPG",
+      "out": "IMG_6753.jpg",
+      "src_bytes": 195038,
+      "out_bytes": 221294,
+      "orig_dims": [
+        1280,
+        960
+      ],
+      "out_dims": [
+        1280,
+        960
+      ]
+    },
+    {
+      "src": "IMG_6927.JPG",
+      "out": "IMG_6927.jpg",
+      "src_bytes": 178346,
+      "out_bytes": 205266,
+      "orig_dims": [
+        960,
+        1280
+      ],
+      "out_dims": [
+        960,
+        1280
+      ]
+    },
+    {
+      "src": "IMG_7008.HEIC",
+      "out": "IMG_7008.jpg",
+      "src_bytes": 2647405,
+      "out_bytes": 612672,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_7014.HEIC",
+      "out": "IMG_7014.jpg",
+      "src_bytes": 2981275,
+      "out_bytes": 740849,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_7018.HEIC",
+      "out": "IMG_7018.jpg",
+      "src_bytes": 2021459,
+      "out_bytes": 620368,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_7173.HEIC",
+      "out": "IMG_7173.jpg",
+      "src_bytes": 3075946,
+      "out_bytes": 360224,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_7175.HEIC",
+      "out": "IMG_7175.jpg",
+      "src_bytes": 2939146,
+      "out_bytes": 384369,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_7696.JPG",
+      "out": "IMG_7696.jpg",
+      "src_bytes": 187990,
+      "out_bytes": 217706,
+      "orig_dims": [
+        1280,
+        960
+      ],
+      "out_dims": [
+        1280,
+        960
+      ]
+    },
+    {
+      "src": "IMG_7697.JPG",
+      "out": "IMG_7697.jpg",
+      "src_bytes": 150617,
+      "out_bytes": 174169,
+      "orig_dims": [
+        960,
+        1280
+      ],
+      "out_dims": [
+        960,
+        1280
+      ]
+    },
+    {
+      "src": "IMG_7880.HEIC",
+      "out": "IMG_7880.jpg",
+      "src_bytes": 3052718,
+      "out_bytes": 389887,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8752.HEIC",
+      "out": "IMG_8752.jpg",
+      "src_bytes": 2030078,
+      "out_bytes": 521688,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8755.HEIC",
+      "out": "IMG_8755.jpg",
+      "src_bytes": 1828298,
+      "out_bytes": 458968,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8756.HEIC",
+      "out": "IMG_8756.jpg",
+      "src_bytes": 1784545,
+      "out_bytes": 439197,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8763.PNG",
+      "out": "IMG_8763.jpg",
+      "src_bytes": 1333237,
+      "out_bytes": 228463,
+      "orig_dims": [
+        1284,
+        842
+      ],
+      "out_dims": [
+        1284,
+        842
+      ]
+    },
+    {
+      "src": "IMG_8783.HEIC",
+      "out": "IMG_8783.jpg",
+      "src_bytes": 4276265,
+      "out_bytes": 1017251,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8817.HEIC",
+      "out": "IMG_8817.jpg",
+      "src_bytes": 2323783,
+      "out_bytes": 401413,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8818.HEIC",
+      "out": "IMG_8818.jpg",
+      "src_bytes": 1921661,
+      "out_bytes": 401291,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8819.HEIC",
+      "out": "IMG_8819.jpg",
+      "src_bytes": 2152759,
+      "out_bytes": 508631,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8820.HEIC",
+      "out": "IMG_8820.jpg",
+      "src_bytes": 2222498,
+      "out_bytes": 534677,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8821.JPG",
+      "out": "IMG_8821.jpg",
+      "src_bytes": 179387,
+      "out_bytes": 205105,
+      "orig_dims": [
+        960,
+        1280
+      ],
+      "out_dims": [
+        960,
+        1280
+      ]
+    },
+    {
+      "src": "IMG_8822.HEIC",
+      "out": "IMG_8822.jpg",
+      "src_bytes": 2122995,
+      "out_bytes": 427440,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8823.HEIC",
+      "out": "IMG_8823.jpg",
+      "src_bytes": 2206632,
+      "out_bytes": 509758,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8824.HEIC",
+      "out": "IMG_8824.jpg",
+      "src_bytes": 2297121,
+      "out_bytes": 296690,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8825.HEIC",
+      "out": "IMG_8825.jpg",
+      "src_bytes": 2416401,
+      "out_bytes": 291275,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8826.HEIC",
+      "out": "IMG_8826.jpg",
+      "src_bytes": 2409508,
+      "out_bytes": 464618,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8827.HEIC",
+      "out": "IMG_8827.jpg",
+      "src_bytes": 2294460,
+      "out_bytes": 451079,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8829.HEIC",
+      "out": "IMG_8829.jpg",
+      "src_bytes": 2069167,
+      "out_bytes": 518394,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8830.JPG",
+      "out": "IMG_8830.jpg",
+      "src_bytes": 165364,
+      "out_bytes": 189446,
+      "orig_dims": [
+        960,
+        1280
+      ],
+      "out_dims": [
+        960,
+        1280
+      ]
+    },
+    {
+      "src": "IMG_8833.HEIC",
+      "out": "IMG_8833.jpg",
+      "src_bytes": 1474928,
+      "out_bytes": 421670,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8835.HEIC",
+      "out": "IMG_8835.jpg",
+      "src_bytes": 1610781,
+      "out_bytes": 465166,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8836.HEIC",
+      "out": "IMG_8836.jpg",
+      "src_bytes": 1442754,
+      "out_bytes": 418800,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8837.HEIC",
+      "out": "IMG_8837.jpg",
+      "src_bytes": 1471691,
+      "out_bytes": 414607,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8839.HEIC",
+      "out": "IMG_8839.jpg",
+      "src_bytes": 1785905,
+      "out_bytes": 403381,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8840.HEIC",
+      "out": "IMG_8840.jpg",
+      "src_bytes": 1757690,
+      "out_bytes": 369251,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8841.HEIC",
+      "out": "IMG_8841.jpg",
+      "src_bytes": 1949612,
+      "out_bytes": 390009,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8842.HEIC",
+      "out": "IMG_8842.jpg",
+      "src_bytes": 1724355,
+      "out_bytes": 352585,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8843.HEIC",
+      "out": "IMG_8843.jpg",
+      "src_bytes": 1695988,
+      "out_bytes": 377441,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8845.HEIC",
+      "out": "IMG_8845.jpg",
+      "src_bytes": 1446768,
+      "out_bytes": 392953,
+      "orig_dims": [
+        4032,
+        3024
+      ],
+      "out_dims": [
+        1920,
+        1440
+      ]
+    },
+    {
+      "src": "IMG_8846.HEIC",
+      "out": "IMG_8846.jpg",
+      "src_bytes": 1570035,
+      "out_bytes": 505149,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8847.HEIC",
+      "out": "IMG_8847.jpg",
+      "src_bytes": 1757661,
+      "out_bytes": 487703,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_8848.HEIC",
+      "out": "IMG_8848.jpg",
+      "src_bytes": 1670990,
+      "out_bytes": 501871,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_9299.HEIC",
+      "out": "IMG_9299.jpg",
+      "src_bytes": 1744220,
+      "out_bytes": 556242,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    },
+    {
+      "src": "IMG_9302.HEIC",
+      "out": "IMG_9302.jpg",
+      "src_bytes": 1477071,
+      "out_bytes": 373794,
+      "orig_dims": [
+        3024,
+        4032
+      ],
+      "out_dims": [
+        1440,
+        1920
+      ]
+    }
+  ],
+  "skipped": [
+    [
+      "IMG_5330 (2).JPG",
+      "copy-suffix"
+    ],
+    [
+      "IMG_8783 (2).HEIC",
+      "copy-suffix"
+    ],
+    [
+      "IMG_8842 (2).HEIC",
+      "copy-suffix"
+    ]
+  ]
+}

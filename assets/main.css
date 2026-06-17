@@ -6,15 +6,15 @@
 
 :root {
   /* Surfaces */
-  --bg:           #100f0c;
-  --surface:      #1a1813;
-  --forest:       #0c0b08;
-  --forest-deep:  #050403;
+  --bg:           #0E1410;
+  --surface:      #16201A;
+  --forest:       #0A100B;
+  --forest-deep:  #050A06;
 
   /* Brand (leaf = золото) */
   --leaf:         #c9a227;
   --leaf-soft:    #e6c766;
-  --sand:         #2a2417;
+  --sand:         #222B1A;
   --sand-soft:    #c9a227;
 
   /* Text */
@@ -24,8 +24,8 @@
   --text-on-dark-muted:  #9c9176;
 
   /* Lines */
-  --border:      #2c2820;
-  --border-dark: #38322a;
+  --border:      #233027;
+  --border-dark: #2D3A30;
 
   /* Geometry */
   --radius:    16px;
@@ -38,6 +38,10 @@
   --font-body:    "Inter", system-ui, -apple-system, sans-serif;
   --font-display: "Fraunces", Georgia, "Times New Roman", serif;
 }
+
+/* Контент скрыт инлайн-стилем в index.html до загрузки этого файла (анти-FOUC).
+   Снимаем сокрытие — к этому моменту основной CSS уже применён, рывка нет. */
+#main { visibility: visible; }
 
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -100,7 +104,7 @@ button { font: inherit; color: inherit; border: none; background: none; cursor: 
 
 /* ---------- Logo mark + wordmark ---------- */
 .logo { display: inline-flex; align-items: center; gap: 10px; }
-.logo__mark { width: 46px; height: 46px; flex: none; }
+.logo__mark { height: 46px; width: auto; flex: none; object-fit: contain; }
 .logo__word { display: flex; flex-direction: column; line-height: 1; }
 .logo__name {
   font-family: var(--font-display);

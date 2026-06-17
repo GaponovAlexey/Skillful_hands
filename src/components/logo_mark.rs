@@ -30,12 +30,14 @@ pub fn LogoMark(#[props(default = 46)] size: i32) -> Element {
     }
 }
 
+const LOGO: Asset = asset!("/assets/img/logo.png");
+
 /// Лого + вордмарк (эмблема + «Skillful Hands / SOLUTIONS LTD.»). Используется в Header и Footer.
 #[component]
 pub fn Logo() -> Element {
     rsx! {
         span { class: "logo",
-            LogoMark {}
+            img { class: "logo__mark", src: LOGO, alt: "" }
             span { class: "logo__word",
                 span { class: "logo__name", "Skillful Hands" }
                 span { class: "logo__sub", "SOLUTIONS LTD." }

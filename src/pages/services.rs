@@ -37,35 +37,36 @@ fn ServicesHero() -> Element {
 // ---------- Services List ----------
 #[component]
 fn ServicesList() -> Element {
-    // (num, title, slug, desc, image base URL). Зигзаг — по индексу строки.
+    // (num, title, slug, desc, фото). Зигзаг — по индексу строки.
+    // Фото — реальные объекты из assets/img/foto_web/ (через asset!() — base-path-safe).
     let rows = [
         (
             "01",
             "Renovations",
             "renovations",
             "Professional renovation services for residential properties — interior, exterior, complete home renovations and restoration, plus custom design and planning.",
-            "https://images.unsplash.com/photo-1761897190222-d222d88851c9",
+            asset!("/assets/img/foto_web/island-retreat-interior-after-07.jpg").to_string(),
         ),
         (
             "02",
             "Outdoor Living Spaces",
             "outdoor-living",
             "Custom deck, pergola, and BBQ area construction designed for durability, functionality, relaxation, and outdoor living.",
-            "https://images.unsplash.com/photo-1735657438299-7d543a1b8cc2",
+            asset!("/assets/img/foto_web/bbq-area-after-06.jpg").to_string(),
         ),
         (
             "03",
             "Cottages & Cabins",
             "cottages-cabins",
             "Custom cottages, cabins, guest houses, and other unique custom-built structures, built to last in any setting.",
-            "https://images.unsplash.com/photo-1604609165742-58e1b9cf0457",
+            asset!("/assets/img/foto_web/island-retreat-exterior-after-03.jpg").to_string(),
         ),
         (
             "04",
             "Landscaping",
             "landscaping",
             "Landscaping and property improvement services for residential and waterfront properties.",
-            "https://images.unsplash.com/photo-1621385236063-8544bb086619",
+            asset!("/assets/img/foto_web/island-retreat-exterior-after-09.jpg").to_string(),
         ),
     ];
     rsx! {
@@ -79,7 +80,7 @@ fn ServicesList() -> Element {
                         class: if i % 2 == 1 { "svc-row svc-row--rev" } else { "svc-row" },
                         div {
                             class: "svc-row__photo",
-                            style: "background-image:url('{img}?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080')",
+                            style: "background-image:url('{img}')",
                         }
                         div { class: "svc-row__text",
                             div { class: "svc-row__top",

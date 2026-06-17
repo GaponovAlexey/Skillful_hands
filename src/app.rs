@@ -1,7 +1,7 @@
 use dioxus::prelude::*;
 
 use crate::components::{CookieBanner, Footer, Header};
-use crate::pages::{Home, Privacy, ServiceDetail, Services, Terms};
+use crate::pages::{Home, Privacy, ProjectDetail, ServiceDetail, Services, Terms};
 
 const MAIN_CSS: Asset = asset!("/assets/main.css");
 // Все стили грузим на уровне App (он не размонтируется при навигации),
@@ -10,6 +10,7 @@ const MAIN_CSS: Asset = asset!("/assets/main.css");
 const HOME_CSS: Asset = asset!("/assets/css/home.css");
 const SERVICES_CSS: Asset = asset!("/assets/css/services.css");
 const SERVICE_CSS: Asset = asset!("/assets/css/service.css");
+const PROJECT_CSS: Asset = asset!("/assets/css/project.css");
 const LEGAL_CSS: Asset = asset!("/assets/css/legal.css");
 // Favicon через asset!() — base-path-safe на project-page /Skillful_hands/.
 const FAVICON: Asset = asset!("/assets/img/logo.png");
@@ -24,6 +25,8 @@ pub enum Route {
     Services {},
     #[route("/services/:slug")]
     ServiceDetail { slug: String },
+    #[route("/projects/:slug")]
+    ProjectDetail { slug: String },
     #[route("/privacy")]
     Privacy {},
     #[route("/terms")]
@@ -38,6 +41,7 @@ pub fn App() -> Element {
         document::Stylesheet { href: HOME_CSS }
         document::Stylesheet { href: SERVICES_CSS }
         document::Stylesheet { href: SERVICE_CSS }
+        document::Stylesheet { href: PROJECT_CSS }
         document::Stylesheet { href: LEGAL_CSS }
         Router::<Route> {}
     }

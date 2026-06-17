@@ -71,7 +71,7 @@
 }
 
 /* ---------- D. Process ---------- */
-.sd-process { background: var(--bg); }
+.sd-process { background: var(--surface); }
 .sd-process__inner { display: flex; flex-direction: column; gap: 40px; }
 .sd-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .sd-step {
@@ -85,7 +85,32 @@
 .sd-step__title { font-family: var(--font-display); font-size: 19px; font-weight: 600; color: var(--text-primary); }
 .sd-step__desc { font-size: 14px; line-height: 1.5; color: var(--text-secondary); }
 
-/* ---------- E. Closing CTA ---------- */
+/* ---------- B. Related projects (кросс-ссылки, портфолио под hero) ---------- */
+.sd-related { width: 100%; padding: 88px var(--pad-x); background: var(--surface); }
+.sd-related__inner { display: flex; flex-direction: column; gap: 36px; }
+.sd-related__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 28px; }
+.sd-related__card {
+  position: relative;
+  display: flex; align-items: flex-end;
+  height: 340px;
+  border-radius: var(--radius-lg); overflow: hidden;
+  background-size: cover; background-position: center;
+  background-color: var(--sand);
+  padding: 18px;
+  transition: transform 0.2s ease;
+}
+.sd-related__card:hover { transform: translateY(-4px); }
+.sd-related__card::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent 40%, #0a0907e6); }
+.sd-related__chip {
+  position: relative; z-index: 1;
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 15px; border-radius: 100px;
+  background: #0e160fcc; color: var(--text-on-dark);
+  font-size: 14px; font-weight: 600;
+}
+.sd-related__chip svg { width: 15px; height: 15px; color: var(--leaf); }
+
+/* ---------- F. Closing CTA ---------- */
 .sd-cta { background: var(--forest); padding-block: 72px; }
 .sd-cta__inner { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
 .sd-cta__title { font-family: var(--font-display); font-size: clamp(28px, 4vw, 38px); font-weight: 600; line-height: 1.1; color: var(--text-on-dark); max-width: 720px; }

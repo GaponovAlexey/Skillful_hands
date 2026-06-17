@@ -18,6 +18,24 @@
 
     <meta property="og:title" content="Skillful Hands Solutions LTD" />
     <meta property="og:type" content="website" />
+
+    <!-- Анти-FOUC: WASM добавляет основной CSS только после загрузки/монтирования,
+         поэтому без этого браузер на холодном старте успевает нарисовать
+         неостилизованный HTML → вспышка и рывок. Критический инлайн-CSS сразу
+         задаёт фон бренда и прячет контент; main.css (через asset!(), base-path-safe)
+         снимает сокрытие — контент появляется уже остилизованным.
+         Скрипт-подстраховка показывает контент через 3 c, если CSS не подгрузился. -->
+    <style>
+      html { background: #0E1410; }
+      body { margin: 0; }
+      #main { visibility: hidden; }
+    </style>
+    <script>
+      setTimeout(function () {
+        var m = document.getElementById("main");
+        if (m) m.style.visibility = "visible";
+      }, 3000);
+    </script>
   </head>
 
   <body>

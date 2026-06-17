@@ -1,6 +1,7 @@
 use dioxus::prelude::*;
 
 use crate::components::{ContactForm, Icon, ScrollLink};
+use crate::pages::project_card;
 use crate::Route;
 
 /// Детальная страница услуги (Pencil DOYUn/Ir8HP/MJ0tT/ArMJd/sgGfF).
@@ -34,7 +35,35 @@ pub fn ServiceDetail(slug: String) -> Element {
                 }
             }
 
-            // B. Features
+            // B. Related projects (реальные проекты — портфолио сразу под hero)
+            if !data.related_projects.is_empty() {
+                section { class: "sd-related",
+                    div { class: "wrap sd-related__inner",
+                        div { class: "sd-head",
+                            span { class: "sd-eyebrow", "OUR WORK" }
+                            h2 { class: "sd-h2", "Related projects" }
+                        }
+                        div { class: "sd-related__grid",
+                            for slug in data.related_projects.iter().copied() {
+                                if let Some((s , chip , img)) = project_card(slug) {
+                                    Link {
+                                        key: "{s}",
+                                        to: Route::ProjectDetail { slug: s.to_string() },
+                                        class: "sd-related__card",
+                                        style: "background-image:url('{img}')",
+                                        span { class: "sd-related__chip",
+                                            "{chip}"
+                                            Icon { name: "arrow-up-right".to_string(), size: 15 }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            // C. Features
             section { class: "sd-features",
                 div { class: "wrap sd-features__inner",
                     div { class: "sd-head",
@@ -49,22 +78,6 @@ pub fn ServiceDetail(slug: String) -> Element {
                                     h3 { class: "sd-feature__title", "{f.title}" }
                                     p { class: "sd-feature__desc", "{f.desc}" }
                                 }
-                            }
-                        }
-                    }
-                }
-            }
-
-            // C. Gallery
-            section { class: "sd-gallery",
-                div { class: "wrap sd-gallery__inner",
-                    h2 { class: "sd-h2", "{data.gallery_title}" }
-                    div { class: "sd-gallery__row",
-                        for img in data.gallery.iter() {
-                            div {
-                                key: "{img}",
-                                class: "sd-gallery__photo",
-                                style: "background-image:url('{img}')",
                             }
                         }
                     }
@@ -130,9 +143,9 @@ struct ServiceData {
     hero_img: String,
     features_title: &'static str,
     features: Vec<Feature>,
-    gallery_title: &'static str,
-    gallery: Vec<String>,
     closing_title: &'static str,
+    /// Связанные проекты (slug) — кросс-ссылки на страницы проектов.
+    related_projects: Vec<&'static str>,
 }
 
 // Шаги процесса одинаковы на всех услугах — общий набор.
@@ -145,14 +158,6 @@ const PROCESS_STEPS: [(&str, &str, &str); 4] = [
 
 fn feature(icon: &'static str, title: &'static str, desc: &'static str) -> Feature {
     Feature { icon, title, desc }
-}
-
-/// Unsplash-фото: базовый id + общий query (как на Home). Hero — шире (w=1600).
-fn hero(id: &str) -> String {
-    format!("https://images.unsplash.com/{id}?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1600")
-}
-fn photo(id: &str) -> String {
-    format!("https://images.unsplash.com/{id}?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=1080")
 }
 
 fn service_by_slug(slug: &str) -> ServiceData {
@@ -169,7 +174,7 @@ fn renovations() -> ServiceData {
     ServiceData {
         name: "Renovations",
         intro: "Professional renovation services for residential properties — interior, exterior, and complete home renovations and restoration, backed by custom design and planning.",
-        hero_img: hero("photo-1761897190222-d222d88851c9"),
+        hero_img: asset!("/assets/img/foto_web/island-retreat-interior-after-07.jpg").to_string(),
         features_title: "Everything a quality renovation needs",
         features: vec![
             feature("ruler", "Custom design & planning", "We plan layout, grades, and finishes before any work begins."),
@@ -177,13 +182,8 @@ fn renovations() -> ServiceData {
             feature("layers", "Exterior renovations", "Siding, decks, facades, and weather-ready exterior work."),
             feature("sparkles", "Complete restoration", "Full home renovations and restoration, done right."),
         ],
-        gallery_title: "Recent renovation projects",
-        gallery: vec![
-            photo("photo-1717292067908-5e36d903c8b0"),
-            photo("photo-1604609165742-58e1b9cf0457"),
-            photo("photo-1779812773030-07c2c1f16e66"),
-        ],
         closing_title: "Ready to start your renovation project?",
+        related_projects: vec!["rustic-utility-room", "island-retreat"],
     }
 }
 
@@ -191,7 +191,7 @@ fn outdoor_living() -> ServiceData {
     ServiceData {
         name: "Outdoor Living Spaces",
         intro: "Custom decks, pergolas, and BBQ areas designed for durability, functionality, relaxation, and year-round outdoor living.",
-        hero_img: hero("photo-1735657438299-7d543a1b8cc2"),
+        hero_img: asset!("/assets/img/foto_web/bbq-area-after-04.jpg").to_string(),
         features_title: "Built for how you live outdoors",
         features: vec![
             feature("hammer", "Custom decks", "Durable, beautiful decks built to fit your space."),
@@ -199,13 +199,8 @@ fn outdoor_living() -> ServiceData {
             feature("sparkles", "BBQ & entertaining", "Built-in BBQ and entertaining areas for hosting."),
             feature("shield-check", "Built to last", "Quality materials that stand up to the coast climate."),
         ],
-        gallery_title: "Recent outdoor living projects",
-        gallery: vec![
-            photo("photo-1688604693147-ff99ce13e291"),
-            photo("photo-1604609165678-096d20fab1ad"),
-            photo("photo-1621385236063-8544bb086619"),
-        ],
         closing_title: "Ready to build your outdoor living space?",
+        related_projects: vec!["waterfront-bbq", "island-retreat"],
     }
 }
 
@@ -213,7 +208,7 @@ fn cottages_cabins() -> ServiceData {
     ServiceData {
         name: "Cottages & Cabins",
         intro: "Custom cottages, cabins, guest houses, and other unique custom-built structures — including remote and hard-to-access sites.",
-        hero_img: hero("photo-1604609165678-096d20fab1ad"),
+        hero_img: asset!("/assets/img/foto_web/island-retreat-exterior-after-03.jpg").to_string(),
         features_title: "Custom structures, built anywhere",
         features: vec![
             feature("house", "Cottages & cabins", "Custom cottages and cabins designed around your vision."),
@@ -221,13 +216,8 @@ fn cottages_cabins() -> ServiceData {
             feature("truck", "Remote-site capable", "Experienced with logistics in remote, hard-to-access locations."),
             feature("sparkles", "Custom structures", "One-of-a-kind custom-built structures."),
         ],
-        gallery_title: "Recent cottage & cabin projects",
-        gallery: vec![
-            photo("photo-1619688137428-851529e61a0f"),
-            photo("photo-1604609165742-58e1b9cf0457"),
-            photo("photo-1717292067908-5e36d903c8b0"),
-        ],
         closing_title: "Ready to build your cottage or cabin?",
+        related_projects: vec!["island-retreat"],
     }
 }
 
@@ -235,7 +225,7 @@ fn landscaping() -> ServiceData {
     ServiceData {
         name: "Landscaping",
         intro: "Landscaping and property improvement services for residential and waterfront properties across the Sunshine Coast.",
-        hero_img: hero("photo-1717292067908-5e36d903c8b0"),
+        hero_img: asset!("/assets/img/foto_web/scenery-01.jpg").to_string(),
         features_title: "Property improvement, inside out",
         features: vec![
             feature("leaf", "Residential landscaping", "Yards, plantings, and grounds that elevate your property."),
@@ -243,12 +233,7 @@ fn landscaping() -> ServiceData {
             feature("ruler", "Site & grounds", "Grading, hardscape, and site improvement."),
             feature("sparkles", "Property improvement", "Finishing touches that boost value and enjoyment."),
         ],
-        gallery_title: "Recent landscaping projects",
-        gallery: vec![
-            photo("photo-1621385236063-8544bb086619"),
-            photo("photo-1779812773030-07c2c1f16e66"),
-            photo("photo-1619688137428-851529e61a0f"),
-        ],
         closing_title: "Ready to transform your property?",
+        related_projects: vec!["island-retreat"],
     }
 }
