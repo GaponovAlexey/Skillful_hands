@@ -26,8 +26,13 @@
   font-family: var(--font-display); font-weight: 600;
   font-size: clamp(38px, 5.5vw, 62px); line-height: 1.05;
   color: var(--text-on-dark);
+  text-shadow: 0 2px 18px rgba(6, 10, 7, 0.55);
 }
-.hero__sub { max-width: 620px; font-size: 18px; line-height: 1.5; color: var(--text-on-dark-muted); }
+.hero__sub {
+  max-width: 620px; font-size: 18px; line-height: 1.5;
+  color: #ece6d6;
+  text-shadow: 0 1px 12px rgba(6, 10, 7, 0.7);
+}
 .hero__ctas { display: flex; gap: 14px; flex-wrap: wrap; }
 
 /* ---------- Generic section ---------- */

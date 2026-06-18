@@ -36,7 +36,7 @@ fn Hero() -> Element {
     rsx! {
         section {
             class: "hero",
-            style: "background-image: linear-gradient(180deg, rgba(10,9,7,0.15) 0%, rgba(10,9,7,0.34) 52%, rgba(10,9,7,0.95) 100%), url({HERO_IMG});",
+            style: "background-image: linear-gradient(180deg, rgba(10,9,7,0.22) 0%, rgba(10,9,7,0.52) 50%, rgba(10,9,7,0.96) 100%), url({HERO_IMG});",
             div { class: "hero__inner",
                 div { class: "hero__eyebrow",
                     Icon { name: "map-pin".to_string(), size: 14 }
