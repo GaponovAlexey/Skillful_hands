@@ -180,8 +180,6 @@ fn OwnerCard(name: String, role: String, bio: String, img: String) -> Element {
 
 #[component]
 fn Owners() -> Element {
-    let mut show_founder_photo = use_signal(|| false);
-
     rsx! {
         section { id: "about", class: "home-section home-section--surface",
             div { class: "wrap",
@@ -194,14 +192,7 @@ fn Owners() -> Element {
                 }
                 div { class: "owners",
                     div { class: "owner-card owner-card--founder",
-                        button {
-                            class: "owner-card__photo-button",
-                            r#type: "button",
-                            onclick: move |_| show_founder_photo.set(true),
-                            "aria-label": "Open larger photo of Aleksandr Dudchenko",
-                            img { class: "owner-card__photo", src: "{FOUNDER_IMG}", alt: "Aleksandr Dudchenko" }
-                            span { class: "owner-card__photo-hint", "Click to enlarge" }
-                        }
+                        img { class: "owner-card__photo", src: "{FOUNDER_IMG}", alt: "Aleksandr Dudchenko" }
                         div { class: "owner-card__body",
                             h3 { class: "owner-card__name", "Aleksandr Dudchenko" }
                             div { class: "owner-card__role", "Owner & Founder" }
@@ -213,18 +204,6 @@ fn Owners() -> Element {
                             p { class: "owner-card__bio", "At Skillful Hands Solutions LTD, we believe that construction is more than simply building structures. It is about creating comfortable, functional, and beautiful spaces that people can enjoy for years to come. For our team, no project is too challenging — every project is completed with dedication, professionalism, and pride in our craftsmanship." }
                         }
                     }
-                }
-            }
-            if show_founder_photo() {
-                div { class: "photo-modal", role: "dialog", "aria-modal": "true",
-                    button {
-                        class: "photo-modal__close",
-                        r#type: "button",
-                        onclick: move |_| show_founder_photo.set(false),
-                        "aria-label": "Close enlarged photo",
-                        "×"
-                    }
-                    img { class: "photo-modal__img", src: "{FOUNDER_IMG}", alt: "Aleksandr Dudchenko project photo enlarged" }
                 }
             }
         }
